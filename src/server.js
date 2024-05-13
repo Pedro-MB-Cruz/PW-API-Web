@@ -10,6 +10,8 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
+app.use(express.static('templates/frontEnd'));
+
 app.use('/api/', router);
 
 const port = process.env.PORT || 8081;
